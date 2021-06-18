@@ -14,7 +14,6 @@ public class Radio {
     }
     public Radio() {
     }
-
     /*public int getMaxRadioStation() {
         return maxRadioStation;
     }
@@ -53,7 +52,6 @@ public class Radio {
         currentRadioStation ++;
     }
 
-
     public void previousRadioStation() {
         if (currentRadioStation <= minRadioStation) {
             currentRadioStation = maxRadioStation;
@@ -91,5 +89,3 @@ public class Radio {
         currentVolume++;
     }
 }
-
-

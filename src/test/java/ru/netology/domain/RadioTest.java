@@ -13,77 +13,66 @@ public class RadioTest {
         rad.nextRadioStation();
         assertEquals(9, rad.getCurrentRadioStation());
     }
-
     @Test
     public void afterMaxRadioStation() {
         rad.setCurrentRadioStation(10);
         rad.nextRadioStation();
         assertEquals(0, rad.getCurrentRadioStation());
     }
-
     @Test
     public void previousRadioStation() {
         rad.setCurrentRadioStation(2);
         rad.previousRadioStation();
         assertEquals(1, rad.getCurrentRadioStation());
     }
-
     @Test
     public void backMinRadioStation() {
         rad.setCurrentRadioStation(0);
         rad.previousRadioStation();
         assertEquals(10, rad.getCurrentRadioStation());
     }
-
     @Test
     public void moreMaxRadioStation() {
         rad.setCurrentRadioStation(11);
         rad.nextRadioStation();
         assertEquals(0, rad.getCurrentRadioStation());
     }
-
     @Test
     public void moreMinRadioStation() {
         rad.setCurrentRadioStation(-1);
         rad.previousRadioStation();
         assertEquals(10, rad.getCurrentRadioStation());
     }
-
     @Test
     public void previousVolume() {
         rad.setCurrentVolume(2);
         rad.previousVolume();
         assertEquals(1, rad.getCurrentVolume());
     }
-
     @Test
     public void backMinVolume() {
         rad.setCurrentVolume(0);
         rad.previousVolume();
         assertEquals(0, rad.getCurrentVolume());
     }
-
     @Test
     public void moreVolume() {
         rad.setCurrentVolume(99);
         rad.moreVolume();
         assertEquals(100, rad.getCurrentVolume());
     }
-
     @Test
     public void moreMaxVolume() {
         rad.setCurrentVolume(100);
         rad.moreVolume();
         assertEquals(100, rad.getCurrentVolume());
     }
-
     @Test
     public void nextMaxVolume() {
         rad.setCurrentVolume(101);
         rad.moreVolume();
         assertEquals(100, rad.getCurrentVolume());
     }
-
     @Test
     public void moreMinVolume() {
         rad.setCurrentVolume(-1);
@@ -116,5 +105,4 @@ public class RadioTest {
         assertEquals(0, rad.getCurrentRadioStation());
         assertEquals(100, rad.getCurrentVolume());
     }
-
 }
