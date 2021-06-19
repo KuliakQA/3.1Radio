@@ -1,26 +1,41 @@
 package ru.netology.domain;
 
 public class Radio {
-    private final int minRadioStation = 0;
-    private final int maxRadioStation = 10;
+    private int minRadioStation = 0;
+    private int maxRadioStation = 10;
     private int currentRadioStation;
-    private final int minVolume = 0;
-    private final int maxVolume = 100;
+    private int minVolume = 0;
+    private int maxVolume = 100;
     private int currentVolume;
+
+    public Radio(int minRadioStation, int maxRadioStation, int currentRadioStation, int minVolume, int maxVolume, int currentVolume) {
+        this.minRadioStation = minRadioStation;
+        this.maxRadioStation = maxRadioStation;
+        this.currentRadioStation = currentRadioStation;
+        this.minVolume = minVolume;
+        this.maxVolume = maxVolume;
+        this.currentVolume = currentVolume;
+    }
 
     public Radio(int currentRadioStation, int currentVolume) {
         this.currentRadioStation = currentRadioStation;
         this.currentVolume = currentVolume;
     }
+
+    public Radio(int maxRadioStation) {
+        this.maxRadioStation = maxRadioStation;
+    }
+
     public Radio() {
     }
-    /*public int getMaxRadioStation() {
+
+    public int getMaxRadioStation() {
         return maxRadioStation;
     }
 
-    public int getMinRadioStation() {
+/*    public int getMinRadioStation() {
         return minRadioStation;
-        }
+    }
 
     public int getMaxVolume() {
         return maxVolume;
@@ -28,8 +43,8 @@ public class Radio {
 
     public int getMinVolume() {
         return minVolume;
-    }
-*/
+    }*/
+
     public int getCurrentRadioStation() {
         return currentRadioStation;
     }
@@ -45,11 +60,11 @@ public class Radio {
     }
 
     public void nextRadioStation() {
-        if(currentRadioStation >= maxRadioStation){
+        if (currentRadioStation >= maxRadioStation) {
             currentRadioStation = minRadioStation;
             return;
         }
-        currentRadioStation ++;
+        currentRadioStation++;
     }
 
     public void previousRadioStation() {
